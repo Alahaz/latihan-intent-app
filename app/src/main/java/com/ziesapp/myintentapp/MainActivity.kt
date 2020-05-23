@@ -14,6 +14,9 @@ import android.widget.Button
 
         val btnPindahAct:Button = findViewById(R.id.btnPindahAct)
         btnPindahAct.setOnClickListener(this)
+        val btnPindahActWithData:Button = findViewById(R.id.btnPindahActWithData)
+        btnPindahActWithData.setOnClickListener(this)
+
     }
 
      override fun onClick(v: View) {
@@ -22,6 +25,14 @@ import android.widget.Button
                  val pindahActivity = Intent(this@MainActivity, PindahActivity::class.java)
                  startActivity(pindahActivity)
              }
+
+             R.id.btnPindahActWithData ->{
+                 val pindahDenganIntent = Intent(this@MainActivity, PindahActivityWithData::class.java)
+                 pindahDenganIntent.putExtra(PindahActivityWithData.EXTRA_NAMA,"Alief Ahmad Azies")
+                 pindahDenganIntent.putExtra(PindahActivityWithData.EXTRA_UMUR, 4)
+                 startActivity(pindahDenganIntent)
+             }
+
          }
      }
  }
