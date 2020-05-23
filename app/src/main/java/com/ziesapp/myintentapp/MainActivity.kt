@@ -1,6 +1,7 @@
 package com.ziesapp.myintentapp
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,7 +17,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnPindahAct.setOnClickListener(this)
         val btnPindahActWithData: Button = findViewById(R.id.btnPindahActWithData)
         btnPindahActWithData.setOnClickListener(this)
-
+        val btnTelpon:Button = findViewById(R.id.btnTelpon)
+        btnTelpon.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -33,7 +35,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 pindahDenganIntent.putExtra(PindahActivityWithData.EXTRA_UMUR, 4)
                 startActivity(pindahDenganIntent)
             }
-
+            R.id.btnTelpon -> {
+                val nomorTelp = "081219043293"
+                val telponIntent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$nomorTelp"))
+                startActivity(telponIntent)
+            }
         }
     }
 }
