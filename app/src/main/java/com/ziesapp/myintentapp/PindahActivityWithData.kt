@@ -6,7 +6,7 @@ import android.widget.TextView
 
 class PindahActivityWithData : AppCompatActivity() {
 
-    companion object{
+    companion object {
         const val EXTRA_UMUR = "extra_umur"
         const val EXTRA_NAMA = "extra_nama"
     }
@@ -18,7 +18,7 @@ class PindahActivityWithData : AppCompatActivity() {
         val tvDataDiterima: TextView = findViewById(R.id.tv_with_data)
 
         val nama = intent.getStringExtra(EXTRA_NAMA)
-        val umur = intent.getIntExtra(EXTRA_UMUR,0)
+        val umur = intent.getIntExtra(EXTRA_UMUR, 0)
 
         val text = "Name : $nama, umur kamu : $umur"
         tvDataDiterima.text = text

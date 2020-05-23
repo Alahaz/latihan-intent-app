@@ -3,26 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    android:orientation="vertical"
     android:padding="16dp"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btnPindahAct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pindah_activity"
         android:layout_marginBottom="16dp"
-        android:id="@+id/btnPindahAct"/>
+        android:text="@string/pindah_activity" />
 
     <Button
+        android:id="@+id/btnPindahActWithData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pindah_activity_data"
         android:layout_marginBottom="16dp"
-        android:id="@+id/btnPindahActWithData"/>
+        android:text="@string/pindah_activity_data" />
 
-
-
+    <Button
+        android:id="@+id/btnTelpon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/buka_telepon" />
 
 
 </LinearLayout>
