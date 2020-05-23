@@ -1,5 +1,6 @@
  package com.ziesapp.myintentapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,9 +16,11 @@ import android.widget.Button
         btnPindahAct.setOnClickListener(this)
     }
 
-     override fun onClick(v: View?) {
+     override fun onClick(v: View) {
          when(v.id){
              R.id.btnPindahAct ->{
+                 val pindahActivity = Intent(this@MainActivity, PindahActivity::class.java)
+                 startActivity(pindahActivity)
              }
          }
      }

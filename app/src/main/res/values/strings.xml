@@ -5,5 +5,6 @@
     <string name="buka_telepon">Buka telepon</string>
     <string name="data_diterima">Data diterima</string>
     <string name="ini_moveact">Ini MoveActivity</string>
+    <string name="ini_pindah">ini adalah activity pindah</string>
 
 </resources>
